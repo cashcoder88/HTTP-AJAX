@@ -1,4 +1,5 @@
 import React from "react";
+import './Components.css';
 
 class FriendsForm extends React.Component {
   state = {
@@ -28,8 +29,8 @@ class FriendsForm extends React.Component {
   render() {
     return (
       <div>
-        <h2>New Friend Form</h2>
-        <form onSubmit={this.handleSubmit}>
+        <h2 className='title'>New Friend Form</h2>
+        <form onSubmit={this.handleSubmit} className='form-container'>
           <input
             type="text"
             name="name"

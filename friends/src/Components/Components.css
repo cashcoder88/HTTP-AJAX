@@ -1,0 +1,20 @@
+.friends-container {
+    display: flex;
+    background: lightgoldenrodyellow;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.form-container {
+    background: grey;
+}
+
+.title {
+    background: lightgray;
+}
+
+.friends {
+    margin: 10px;
+    padding: 5px;
+}
