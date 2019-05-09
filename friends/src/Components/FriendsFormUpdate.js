@@ -1,21 +1,16 @@
 import React from "react";
-import './Components.css';
 
-class FriendsForm extends React.Component {
+class FriendsFormUpdate extends React.Component {
   state = {
-    friends: {
-        name: '',   
-        age: '',
-        email: ''
-    }
+    friends: this.props.activeItem
   };
 
   changeHandler = ev => {
     ev.persist();
     let value = ev.target.value;
     this.setState(prevState => ({
-      friends: {
-        ...prevState.friends,
+      item: {
+        ...prevState.item,
         [ev.target.friends]: value
       }
     }));
@@ -23,13 +18,13 @@ class FriendsForm extends React.Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.addItem(this.state.friends);
+    this.props.updateItem(this.state.friends);
   };
 
   render() {
     return (
-      <div>
-        <h2 className='title'>New Friend Form</h2>
+        <div>
+        <h2 className='title'>Update Friend Form</h2>
         <form onSubmit={this.handleSubmit} className='form-container'>
           <input
             type="text"
@@ -58,11 +53,11 @@ class FriendsForm extends React.Component {
           />
           <div className="baseline" />
 
-          <button className="md-button form-button">Add New Friend</button>
+          <button className="md-button form-button">Update Friend</button>
         </form>
       </div>
     );
   }
 }
 
-export default FriendsForm;
+export default FriendsFormUpdate;
