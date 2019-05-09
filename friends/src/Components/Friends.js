@@ -8,7 +8,6 @@ const Friends = (props) => {
                     <h1>Name: {friend.name}</h1>
                     <h3>Age: {friend.age}</h3>
                     <h3>Email Address: {friend.email}</h3>
-                    <h1>Testing</h1>
                 </div>
             ))}
         </div>
